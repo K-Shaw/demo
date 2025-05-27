@@ -13,4 +13,5 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run PowerShell script on Linux
-        run: pwsh ./scripts/hello.ps1  # Explicitly call pwsh
+        run: ./scripts/hello.ps1  # Explicitly call pwsh
+        shell: pwsh
