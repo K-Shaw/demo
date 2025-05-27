@@ -1,0 +1,17 @@
+name: Run PowerShell Script
+
+on:
+  push:
+    branches:
+      - hello-branch
+
+jobs:
+  run-script:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run hello.ps1 script
+        run: ./scripts/hello.ps1
+        shell: pwsh
