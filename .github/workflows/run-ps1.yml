@@ -7,11 +7,11 @@ on:
 
 jobs:
   run-script:
-    runs-on: ubuntu-latest   # <-- Linux runner
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Run PowerShell script on Linux
-        run: ./scripts/hello.ps1  # Explicitly call pwsh
+        run: ./scripts/hello.ps1
         shell: pwsh
