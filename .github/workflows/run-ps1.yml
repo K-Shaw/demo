@@ -1,4 +1,4 @@
-name: Run PowerShell Script
+name: Run PowerShell Script on Linux
 
 on:
   push:
@@ -7,11 +7,10 @@ on:
 
 jobs:
   run-script:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest   # <-- Linux runner
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run hello.ps1 script
-        run: ./scripts/hello.ps1
-        shell: pwsh
+      - name: Run PowerShell script on Linux
+        run: pwsh ./scripts/hello.ps1  # Explicitly call pwsh
